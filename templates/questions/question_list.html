@@ -1,0 +1,31 @@
+
+<h2>List of Questions</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Question</th>
+            <th>Option A</th>
+            <th>Option B</th>
+            <th>Option C</th>
+            <th>Option D</th>
+            <th>Option E</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for question in questions %}
+        <tr>
+            <td>{{ question.question_main }}</td>
+            <td>{{ question.a }}</td>
+            <td>{{ question.b }}</td>
+            <td>{{ question.c }}</td>
+            <td>{{ question.d }}</td>
+            <td>{{ question.e }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="6">No questions found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
